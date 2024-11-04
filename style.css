@@ -1,0 +1,143 @@
+:root{
+
+--Soft-red: hsl(345, 95%, 68%);
+--Grayish-blue:hsl(237,18%, 59%);
+--White:hsl(0, 0%, 100%);
+--Dark-desaturated-blue: hsl(236, 21%, 26%);
+--Very-dark-blue: hsl(235, 16%, 14%);
+--Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+  /* Start Global Rules */
+  @font-face {
+    font-family: "RedHatText-Bold";
+    src: url(Red_Hat_Text/static/RedHatText-Bold.ttf);
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+   }
+  body {
+   margin: 0;
+   padding: 0;
+;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+.countdown{
+    background: linear-gradient( var(--Very-dark-blue),var(--Very-dark-mostly-black-blue)), url(images/bg-stars.svg);
+    background-blend-mode: overlay; /* Optional: controls how the gradient and image blend */
+    position: relative;
+    min-height: 100vh;
+}
+.countdown .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+    margin-top: 55px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "RedHatText-Bold";
+}
+.count_blocks{
+    display: flex;
+    margin: 60px 0;
+}
+.count_blocks .blocks{
+    text-align: center;
+    margin: 0 10px;
+}
+
+.count_blocks .blocks .block{
+    width: 130px;
+    height: 140px;
+    border-radius: 12px;
+    background: var(--Dark-desaturated-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count_blocks .blocks .block span{
+    font-size: 53px;
+    font-weight: 700;
+    color: var(--Soft-red);
+    font-family: "RedHatText-Bold";
+}
+.count_blocks .blocks p{
+    color: var(--White);
+    text-transform: uppercase;
+    font-family: "RedHatText-Bold";
+}
+.social-icon{
+    position: relative;
+    z-index: 2; /* Set social icons above the image */
+    text-align: center;
+    margin-top: 50px;
+}
+.social-icon a i{
+    color: var(--Grayish-blue);
+    font-size: 25px
+}
+.social-icon a i:hover{
+    color: var(--Soft-red);
+}
+.countdown >img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Set image behind other elements */
+
+}
+@media (max-width:500px) {
+    
+.count_blocks .blocks .block{
+    width: 90px;
+    height: 80px;
+}
+.count_blocks .blocks .block span{
+    font-size:34px;
+    font-weight: 700;
+    
+
+}
+.social-icon{
+    position: relative;
+    z-index: 2; /* Set social icons above the image */
+    text-align: center;
+    margin-top: 200px;
+
+}
+}
